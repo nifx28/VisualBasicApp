@@ -10,6 +10,16 @@
 
     End Sub
 
+    Friend Shared Function ShowInfo(Self As Form, Message As String, Buttons As MessageBoxButtons)
+
+        Return MessageBox.Show(Self,
+                        Message,
+                        ExcelForm.Title,
+                        Buttons,
+                        MessageBoxIcon.Information)
+
+    End Function
+
     Friend Shared Sub ShowError(Self As Form, Message As String)
 
         MessageBox.Show(Self,

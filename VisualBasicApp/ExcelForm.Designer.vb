@@ -24,6 +24,7 @@ Partial Class ExcelForm
     Private Sub InitializeComponent()
         Me.ButtonRead = New System.Windows.Forms.Button()
         Me.ButtonWrite = New System.Windows.Forms.Button()
+        Me.ButtonTrigger = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ButtonRead
@@ -44,11 +45,21 @@ Partial Class ExcelForm
         Me.ButtonWrite.Text = "寫入"
         Me.ButtonWrite.UseVisualStyleBackColor = True
         '
+        'ButtonTrigger
+        '
+        Me.ButtonTrigger.Location = New System.Drawing.Point(203, 11)
+        Me.ButtonTrigger.Name = "ButtonTrigger"
+        Me.ButtonTrigger.Size = New System.Drawing.Size(90, 45)
+        Me.ButtonTrigger.TabIndex = 2
+        Me.ButtonTrigger.Text = "觸發"
+        Me.ButtonTrigger.UseVisualStyleBackColor = True
+        '
         'ExcelForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(208, 67)
+        Me.ClientSize = New System.Drawing.Size(304, 67)
+        Me.Controls.Add(Me.ButtonTrigger)
         Me.Controls.Add(Me.ButtonWrite)
         Me.Controls.Add(Me.ButtonRead)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
@@ -61,4 +72,5 @@ Partial Class ExcelForm
 
     Friend WithEvents ButtonRead As Button
     Friend WithEvents ButtonWrite As Button
+    Friend WithEvents ButtonTrigger As Button
 End Class
