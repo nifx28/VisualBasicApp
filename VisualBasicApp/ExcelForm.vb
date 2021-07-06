@@ -13,10 +13,11 @@ Public Class ExcelForm
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Title = Text
-        Text &= " - " & ExcelFile
+        Dim ExcelFileName As String = String.Format(ExcelFile, String.Empty)
+        Text &= " - " & ExcelFileName
 
         Dim RootPath As String = Path.GetDirectoryName(Assembly.GetExecutingAssembly.Location)
-        Dim FilePath As String = Path.Combine(RootPath, String.Format(ExcelFile, String.Empty))
+        Dim FilePath As String = Path.Combine(RootPath, ExcelFileName)
 
         If Not File.Exists(FilePath) Then
 
